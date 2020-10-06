@@ -21,7 +21,9 @@ app.use(boydParser.json());
 
 
 
-
+app.get('/', (req, res) => {
+  res.send('Hello volunteer!')
+})
 
 
 
@@ -67,8 +69,6 @@ client.connect(err => {
 
 
 
-app.get('/', (req, res) => {
-  res.send('Hello volunteer!')
-})
+
 
 app.listen(process.env.PORT||port)
